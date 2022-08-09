@@ -12,13 +12,13 @@ $(document).ready(function () {
         now12 = 1;
     }
 
-    // Display current date
+    // Displays the current date
     var currentDate = $('#currentDay');
     currentDate.text(now);
 
-    // init date and time
+    // initial date and time
     var datetime = new Date(); 
-    // returns 0-23 on a 24 hour clock
+    // returns 0-23 on a 24 hour clock 
     var currentHour = datetime.getHours(); 
 
     for (var i = 8; i < 18; i++) {
@@ -30,7 +30,7 @@ $(document).ready(function () {
             document.getElementById(i.toString()).classList.add('future');
         }
     }
-    // Local Storage Feature
+    // Local Storage Feature for saving the inputs
 
      {
         $('.saveBtn').click(function () {
@@ -57,7 +57,7 @@ $(document).ready(function () {
         });
      }
 
-     // Display saved tasks
+     // Display saved inputs to the page
      var saved8 = localStorage.getItem('text8');
      document.getElementById('8').value = saved8;
      var saved9 = localStorage.getItem('text9');
